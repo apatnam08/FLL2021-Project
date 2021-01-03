@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WALL-Exercising | Sign In</title>
+<style>
+div.header {
+  position: -webkit-sticky;
+  position: sticky;
+  box-shadow: 0px 4px 5px gray;
+  top: 0;
+  padding: 25px;
+  background-color: #f5f5f5;
+  text-align: center;
+  width: 100%;
+}
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  background-color: white;
+  text-align: center;
+}
+
+div.shadow {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 10px black, 0 0 5px black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 15px;
+  background-color: white;
+}
+
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 15px;
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: blueviolet;
+  color: white;
+  box-shadow: 0px 7px 5px purple;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.footer {
+  background-color: black;
+  text-align: center;
+  width: 100%;
+}
+  </style>
+  <script>
+    function checkPassword() {
+	  var username = document.getElementById("email");
+      var password = document.getElementById("passwordBox");
+	  var usernameText = username.value;
+      var passwordText = password.value;
+	  if (usernameText == "apatnam08@gmail.com") {
+        if (passwordText == "adi108108") {
+          return true;
+        }else {
+        alert("INVALID PASSWORD");
+          return false;
+	    }
+      }else {
+        alert("INVALID USERNAME");
+        return false;
+	  }
+    }
+</script>
+</head>
+<body>
+<form action="App.html">
+<div class = "header">
+	<b>The WALL-Exercising</b>
+</div>
+<img src = "https://i.gifer.com/cL3.gif" height="760" width = "750" ALIGN="right">
+<div style = "background-color: white; border: 1px solid gray; height: 762px; width: 750px;">
+  <div class = "shadow">
+  <p style = "font-size: 30pt;"> <strong>Login</strong></p>
+  </div>
+  <p style = "font-size: 15pt;">Please enter email and password to view the app.</p>
+  <div class="container">
+     <p>Don't have an account? <a href="App Registration .html">Register</a>.</p>
+  </div>
+  <hr>
+  <label for="email"><b>Email:</b></label>
+  <input type="text" placeholder="Enter Email" name="email" id="email" required>
+  <br/>
+  <p><b>Password:</b><input id = "passwordBox" type = "password" placeholder="Enter Password" required /></p>
+  <hr>
+  <!--<button id="login_btn" type="submit" class="registerbtn" onclick = "return checkPassword()">Sign In</button>-->
+  <button id="login_btn" type="submit" class="registerbtn">Sign In</button>
+</div>
+    <div class = "container footer" style = "color:gray">
+	  <p><b>The WALL-Exercising...................Sign up today!</b><p>
+	  Call me at: <a href="tel:+15167896226">+1-516-789-6226</a>
+	</div>
+</form>
+</body>
+</html>
