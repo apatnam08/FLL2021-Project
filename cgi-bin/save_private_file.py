@@ -83,14 +83,14 @@ hr {
 
 /* Set a style for the submit button */
 .registerbtn {
-  background-color: blueviolet;
+  background-color: #00008A;
   color: white;
-  box-shadow: 0px 7px 5px purple;
+  box-shadow: 0px 7px 5px #000049;
   padding: 16px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 28%;
+  width: 7%;
   opacity: 0.9;
 }
 
@@ -122,11 +122,48 @@ a {
 	filter: grayscale(75%);
 	transform: scale(1.1);
 }
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00008A;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00008A;
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
 <div class = "header">
-	<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="App.html">Home</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Research</a> | <a href="Excercise app Gallary.html">Gallery</a></b>
+	<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="App.html">Home</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Analytics</a> | <a href="Excercise app Gallary.html">Gallery</a> | <a href="Admin.html">Admin-Only</a></b>
 </div>
 <br/>
 
@@ -147,13 +184,29 @@ a {
    for file in os.listdir("adithya_images\\"):
      imgLine='<a href = "..\\adithya_images\\' + file +'"><img src="..\\adithya_images\\' + file + '" alt="image' + str(fileNum) + '" width="300" height="200"><br/>' + '\n'
      removeLine='<b><a href = "../cgi-bin/delete_private_file.py?post=..\\adithya_images\\' + file + '">Delete picture</a></b><br/><br/>' + '\n'
+     gradeLine='''
+<div class="slidecontainer">
+  <input type="range" min="0" max="1000" value="500" class="slider"  step = "50" id="myRange'''+str(fileNum)+'''">
+  <p>Value: <span id="demo'''+str(fileNum)+'''"></span></p>
+</div>'''
+     scriptLine='''
+<script>
+  var slider'''+str(fileNum)+''' = document.getElementById("myRange'''+str(fileNum)+'''");
+  var output'''+str(fileNum)+'''  = document.getElementById("demo'''+str(fileNum)+'''");
+  output'''+str(fileNum)+'''.innerHTML = slider'''+str(fileNum)+'''.value;
+  slider'''+str(fileNum)+'''.oninput = function() {
+    output'''+str(fileNum)+'''.innerHTML = this.value;
+  }
+</script>'''
      htmlFile.write(imgLine)
      htmlFile.write(removeLine)
+     htmlFile.write(gradeLine)
+     htmlFile.write(scriptLine)
      fileNum+=1
    htmlFile.write('''<h3>Upload your own private image!</h3>
 <form enctype = "multipart/form-data" action = "../cgi-bin/save_private_file.py" method = "post">
    <p>File: <input type = "file" name = "filename" /></p>
-   <p><input type = "submit" value = "Upload" /></p>
+   <p><input type = "submit" value = "Upload" class = "registerbtn"/></p>
 </form>
 <br/>
 <!--

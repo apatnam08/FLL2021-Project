@@ -84,15 +84,16 @@ hr {
 }
 
 /* Set a style for the submit button */
+/* Set a style for the submit button */
 .registerbtn {
-  background-color: blueviolet;
+  background-color: #00008A;
   color: white;
-  box-shadow: 0px 7px 5px purple;
+  box-shadow: 0px 7px 5px #000049;
   padding: 16px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 28%;
+  width: 7%;
   opacity: 0.9;
 }
 
@@ -151,7 +152,7 @@ a {
    htmlFile.write('''<h3>Upload your own image!</h3>
 <form enctype = "multipart/form-data" action = "../cgi-bin/save_file.py" method = "post">
    <p>File: <input type = "file" name = "filename" /></p>
-   <p><input type = "submit" value = "Upload" /></p>
+   <p><input type = "submit" value = "Upload" class = "registerbtn"/></p>
 </form>
 <br/>
 </center>
