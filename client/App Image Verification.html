@@ -154,8 +154,8 @@ a {
 </div>
 
 
-<a href = "..\adithya_images\sports.jpg"><img src="..\adithya_images\sports.jpg" alt="image1" width="300" height="200"><br/>
-<b><a href = "../cgi-bin/delete_private_file.py?post=..\adithya_images\sports.jpg">Delete picture</a></b><br/><br/>
+<a href = "..\adithya_images\IMG-20210103-WA0001.jpg"><img src="..\adithya_images\IMG-20210103-WA0001.jpg" alt="image1" width="300" height="200"><br/>
+<b><a href = "../cgi-bin/delete_private_file.py?post=..\adithya_images\IMG-20210103-WA0001.jpg">Delete picture</a></b><br/><br/>
 
 <div class="slidecontainer">
   <input type="range" min="0" max="1000" value="500" class="slider"  step = "50" id="myRange1">
@@ -168,15 +168,40 @@ a {
   slider1.oninput = function() {
     output1.innerHTML = this.value;
   }
-</script><h3>Upload your own private image!</h3>
+</script>
+<b><a href = "../cgi-bin/App test.py?post=500">Apply</a></b><br/><br/><a href = "..\adithya_images\sports.jpg"><img src="..\adithya_images\sports.jpg" alt="image2" width="300" height="200"><br/>
+<b><a href = "../cgi-bin/delete_private_file.py?post=..\adithya_images\sports.jpg">Delete picture</a></b><br/><br/>
+
+<div class="slidecontainer">
+  <input type="range" min="0" max="1000" value="500" class="slider"  step = "50" id="myRange2">
+  <p>Value: <span id="demo2"></span></p>
+</div>
+<script>
+  var slider2 = document.getElementById("myRange2");
+  var output2  = document.getElementById("demo2");
+  output2.innerHTML = slider2.value;
+  slider2.oninput = function() {
+    output2.innerHTML = this.value;
+  }
+</script>
+<b><a href = "../cgi-bin/App test.py?post=500">Apply</a></b><br/><br/><h3>Upload your own private image!</h3>
 <form enctype = "multipart/form-data" action = "../cgi-bin/save_private_file.py" method = "post">
    <p>File: <input type = "file" name = "filename" /></p>
    <p><input type = "submit" value = "Upload" class = "registerbtn"/></p>
 </form>
 <br/>
+<!--
+<b><a href="../cgi-bin/delete_private_file.py">Delete</a></b>
+
+<form enctype = "multipart/form-data" action = "../cgi-bin/delete_private_file.py" method = "post">
+   <p>File: <input type = "file" name = "filename" /></p>
+   <p><input type = "submit" value = "Delete" /></p>
+</form>
+-->
+<br/>
 </center>
 <div class = "container footer" style = "color:gray">
-	<p><b>The WALL-Exercising...................Sign up today!</b><p>
-	Call me at: <a href="tel:+15167896226">+1-516-789-6226</a>
+	  <p><b>The WALL-Exercising...................Sign up today!</b><p>
+	  Call me at: <a href="tel:+15167896226">+1-516-789-6226</a>
 </div></body>
 </html>

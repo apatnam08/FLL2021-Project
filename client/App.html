@@ -3,6 +3,44 @@
 <head>
   <title>WALL-Exercising | App</title>
 <style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 div.header {
   position: -webkit-sticky;
   position: sticky;
@@ -56,14 +94,14 @@ hr {
 
 /* Set a style for the submit button */
 .registerbtn {
-  background-color: blueviolet;
+  background-color: #000080;
   color: white;
-  box-shadow: 0px 7px 5px purple;
+  box-shadow: 0px 7px 5px #000049;
   padding: 16px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 25%;
+  width: 9%;
   opacity: 0.9;
 }
 
@@ -73,7 +111,7 @@ hr {
 
 /* Add a blue text color to links */
 a {
-  color: dodgerblue;
+  color: #E6B000;
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
@@ -86,13 +124,55 @@ a {
 </head>
 <body>
 <div class = "header">
-	<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="Excercise app Gallary.html">Gallery</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Research</a> | <a href="App Image Verification.html">e-Verify</a></b>
+	
+
+<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="Excercise app Gallary.html">Gallery</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Analytics</a> | <a href="App Image Verification.html">e-Verify</a> | <a href="Admin.html">Admin-Only</a> &nbsp; &nbsp; &nbsp; &nbsp; <button id="myBtn" class="registerbtn" >Thank you!</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 	<span style="background-color: #CBCBCB">1500 points</span></b>
+
 </div>
 <br/>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Since you just got started with our app, we'll thank you and give you 1000 points!</p>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
 <a href = "https://cdn.cdnparenting.com/articles/2018/06/467385302-H.jpg"><img src = "https://cdn.cdnparenting.com/articles/2018/06/467385302-H.jpg" height="200" width = "301" ALIGN="left"></a>
 <img src = "https://www.cheatsheet.com/wp-content/uploads/2015/08/Happy-friends-running-in-the-park.jpg" height="200" width = "301" ALIGN="left">
 <img src = "https://goalrilla.com/static/ef1f77d8f29dc8f0ee4351fb3ac96b4d/0e329/b5000w_goalrilla_gs72c_dscf7824.jpg" height="200" width = "300" ALIGN="left">
-<img src = "https://f2z5y7q2.rocketcdn.me/news/u/2019/06/Exercising-kids-girls-runnibg-large-bigstock.jpg" height="200" width = "300" ALIGN="left">
+<img src = "https://www.baptistmilestone.com/hs-fs/hub/388982/file-1944606465-jpg/Blog_Images/kids_exercising.jpg?width=400&name=kids_exercising.jpg" height="200" width = "300" ALIGN="left">
 <img src = "https://healthpoweredkids.org/wp-content/uploads/2015/08/IMG_3451-e1438879101858.jpg" height="200" width = "300" ALIGN="left">
 <img src = "https://www.verywellfamily.com/thmb/HdUIFUInf0JmHUzKtezLyZ-sYFw=/500x350/filters:no_upscale():max_bytes(150000):strip_icc()/boys-playing-in-a-soccer-match-557921577-572104783df78c56409d29c4.jpg" height="200" width = "300" ALIGN="left">
 <img src = "https://iyca.org/wp-content/uploads/2012/07/training-young-athletes-with-deadlifts.jpg" height="200" width = "300" ALIGN="right">
@@ -117,8 +197,8 @@ a {
     <h2><b>Then WALL-Exercising is the thing for you!</b></h2>
 </div>
 <div>
-	<h3><b>All YOU have to do is excercise!<b></h3>
-	<h3><b>Excercise daily to complete goals....<b></h3>
+	<h3><b>All YOU have to do is exercise!<b></h3>
+	<h3><b>Exercise daily to complete goals....<b></h3>
 </div>
 <img src = "https://i.guim.co.uk/img/media/5994290cd2f3a9440bcffdf31f513ae258323c78/0_0_6000_3600/master/6000.jpg?width=445&quality=85&auto=format&fit=max&s=ea015bb6148b686a43d663f5b844957d" height="200" width = "300" ALIGN="left">
 <img src = "https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half/public/field_blog_entry_images/no-attribution-CC0%20public%20domain-run-1321278_1920.jpg?itok=k9yEKjPY" height="200" width = "300" ALIGN="right">
@@ -133,7 +213,7 @@ a {
 </div>
 </center>
 <div class = "container footer" style = "color:gray">
-	  <p><b>The WALL-Exercising...................Sign up today!</b><p>
+	  <h2><pre class="tab">The WALL-Exercising                 Sign up today!</pre></h2>
 	  Call me at: <a href="tel:+15167896226">+1-516-789-6226</a>
 </div>
 </body>

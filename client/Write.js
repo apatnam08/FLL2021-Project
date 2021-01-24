@@ -1,0 +1,1 @@
+document.write('<b><a href = "../cgi-bin/App test.py?post='+int(this.value)+'">Apply</a></b>';

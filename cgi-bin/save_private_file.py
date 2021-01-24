@@ -197,11 +197,14 @@ a {
   slider'''+str(fileNum)+'''.oninput = function() {
     output'''+str(fileNum)+'''.innerHTML = this.value;
   }
-</script>'''
+</script>
+'''
+     buttonLine='''<b><a href = "../cgi-bin/App test.py?post=500">Apply</a></b><br/><br/>'''
      htmlFile.write(imgLine)
      htmlFile.write(removeLine)
      htmlFile.write(gradeLine)
      htmlFile.write(scriptLine)
+     htmlFile.write(buttonLine)
      fileNum+=1
    htmlFile.write('''<h3>Upload your own private image!</h3>
 <form enctype = "multipart/form-data" action = "../cgi-bin/save_private_file.py" method = "post">
