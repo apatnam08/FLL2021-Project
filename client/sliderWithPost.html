@@ -58,12 +58,12 @@
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
-var w = 600
+
 slider.oninput = function() {
   output.innerHTML = this.value;
-document.getElementById("mytext").value = w;
+document.getElementById("mytext").value = this.value;
 }
-</script>
+</script><p>16</p>
 
 </body>
 </html>

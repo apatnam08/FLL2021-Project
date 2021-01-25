@@ -122,43 +122,7 @@ a {
 	filter: grayscale(75%);
 	transform: scale(1.1);
 }
-.slidecontainer {
-  width: 100%;
-}
 
-.slider {
-  -webkit-appearance: none;
-  width: 25%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #00008A;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #00008A;
-  cursor: pointer;
-}
 </style>
 </head>
 <body>
@@ -184,11 +148,6 @@ a {
    for file in os.listdir("adithya_images\\"):
      imgLine='<a href = "..\\adithya_images\\' + file +'"><img src="..\\adithya_images\\' + file + '" alt="image' + str(fileNum) + '" width="300" height="200"><br/>' + '\n'
      removeLine='<b><a href = "../cgi-bin/delete_private_file.py?post=..\\adithya_images\\' + file + '">Delete picture</a></b><br/><br/>' + '\n'
-     gradeLine='''
-<div class="slidecontainer">
-  <input type="range" min="0" max="1000" value="500" class="slider"  step = "50" id="myRange'''+str(fileNum)+'''">
-  <p>Value: <span id="demo'''+str(fileNum)+'''"></span></p>
-</div>'''
      scriptLine='''
 <script>
   var slider'''+str(fileNum)+''' = document.getElementById("myRange'''+str(fileNum)+'''");
@@ -197,12 +156,16 @@ a {
   slider'''+str(fileNum)+'''.oninput = function() {
     output'''+str(fileNum)+'''.innerHTML = this.value;
   }
+  document.getElementById("mytext'''+str(fileNum)+'''").value = this.value;
 </script>
 '''
-     buttonLine='''<b><a href = "../cgi-bin/App test.py?post=500">Apply</a></b><br/><br/>'''
+     buttonLine='''
+<form name="input" action="../cgi-bin/App test.py" method="post">
+ <input type="text" name="user" id="mytext'''+str(fileNum)+'''"><br/>
+ <input type="submit" value="Submit" class = "registerbtn">
+</form>'''
      htmlFile.write(imgLine)
      htmlFile.write(removeLine)
-     htmlFile.write(gradeLine)
      htmlFile.write(scriptLine)
      htmlFile.write(buttonLine)
      fileNum+=1

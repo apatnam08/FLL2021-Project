@@ -1,9 +1,10 @@
 #!/usr/bin/python
 import cgi, os
 import cgitb; cgitb.enable()
-#form = cgi.FieldStorage()
+form = cgi.FieldStorage()
 #fn = int(form["post"].value)
-echo $_POST['user'];
+fn = int(form['user'].value)
+print("slider: ", fn)
 
 htmlFile = open('client\\sliderWithPost.html', 'w')
    
@@ -58,7 +59,7 @@ htmlFile.write('''<!DOCTYPE html>
   <p>Value: <span id="demo"></span></p>
 </div>
 
-<form name="input" action="some.php" method="post">
+<form name="input" action="../cgi-bin/gettingPostValue.py" method="post">
  <input type="text" name="user" id="mytext">
  <input type="submit" value="Submit">
 </form>

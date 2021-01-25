@@ -102,43 +102,7 @@ a {
 	filter: grayscale(75%);
 	transform: scale(1.1);
 }
-.slidecontainer {
-  width: 100%;
-}
 
-.slider {
-  -webkit-appearance: none;
-  width: 25%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #00008A;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #00008A;
-  cursor: pointer;
-}
 </style>
 </head>
 <body>
@@ -152,15 +116,9 @@ a {
     <h1>Private Pictures!</h1>
 	<br/><br/>
 </div>
+<a href = "..\adithya_images\sports.jpg"><img src="..\adithya_images\sports.jpg" alt="image1" width="300" height="200"><br/>
+<b><a href = "../cgi-bin/delete_private_file.py?post=..\adithya_images\sports.jpg">Delete picture</a></b><br/><br/>
 
-
-<a href = "..\adithya_images\IMG-20210103-WA0001.jpg"><img src="..\adithya_images\IMG-20210103-WA0001.jpg" alt="image1" width="300" height="200"><br/>
-<b><a href = "../cgi-bin/delete_private_file.py?post=..\adithya_images\IMG-20210103-WA0001.jpg">Delete picture</a></b><br/><br/>
-
-<div class="slidecontainer">
-  <input type="range" min="0" max="1000" value="500" class="slider"  step = "50" id="myRange1">
-  <p>Value: <span id="demo1"></span></p>
-</div>
 <script>
   var slider1 = document.getElementById("myRange1");
   var output1  = document.getElementById("demo1");
@@ -168,23 +126,13 @@ a {
   slider1.oninput = function() {
     output1.innerHTML = this.value;
   }
+  document.getElementById("mytext1").value = this.value;
 </script>
-<b><a href = "../cgi-bin/App test.py?post=500">Apply</a></b><br/><br/><a href = "..\adithya_images\sports.jpg"><img src="..\adithya_images\sports.jpg" alt="image2" width="300" height="200"><br/>
-<b><a href = "../cgi-bin/delete_private_file.py?post=..\adithya_images\sports.jpg">Delete picture</a></b><br/><br/>
 
-<div class="slidecontainer">
-  <input type="range" min="0" max="1000" value="500" class="slider"  step = "50" id="myRange2">
-  <p>Value: <span id="demo2"></span></p>
-</div>
-<script>
-  var slider2 = document.getElementById("myRange2");
-  var output2  = document.getElementById("demo2");
-  output2.innerHTML = slider2.value;
-  slider2.oninput = function() {
-    output2.innerHTML = this.value;
-  }
-</script>
-<b><a href = "../cgi-bin/App test.py?post=500">Apply</a></b><br/><br/><h3>Upload your own private image!</h3>
+<form name="input" action="../cgi-bin/App test.py" method="post">
+ <input type="text" name="user" id="mytext1"><br/>
+ <input type="submit" value="Submit" class = "registerbtn">
+</form><h3>Upload your own private image!</h3>
 <form enctype = "multipart/form-data" action = "../cgi-bin/save_private_file.py" method = "post">
    <p>File: <input type = "file" name = "filename" /></p>
    <p><input type = "submit" value = "Upload" class = "registerbtn"/></p>

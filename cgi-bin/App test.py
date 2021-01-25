@@ -3,7 +3,7 @@ import cgi, os
 import cgitb; cgitb.enable()
 form = cgi.FieldStorage()
 # Get filename here.
-fn = int(form["post"].value) + 1000
+fn = int(form['user'].value)
 
 # below code is to regenerate html page for the updated private gallery
 
