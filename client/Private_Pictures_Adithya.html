@@ -1,6 +1,6 @@
 <html>
 <head>
-<title> WALL-Exercising | Gallery </title>
+<title> WALL-Exercising | e-Verify </title>
 </head>
 <body>
 <!DOCTYPE html>
@@ -8,9 +8,7 @@
 <meta charset="UTF-8">
 <meta name = "viewpoint" content="width=device-width, initial-scale=1.0">
 <head>
-  <title>WALL-Exercising | Gallery</title>
-  <!--<link rel="stylesheet" type="text/css" href="css/lightbox.min">
-  <script src= "js/lightbox-plus-jquery.min"></script>-->
+  <title>WALL-Exercising | e-Verify</title>
 <style>
 div.header {
   position: -webkit-sticky;
@@ -64,7 +62,6 @@ hr {
 }
 
 /* Set a style for the submit button */
-/* Set a style for the submit button */
 .registerbtn {
   background-color: #00008A;
   color: white;
@@ -105,31 +102,40 @@ a {
 	filter: grayscale(75%);
 	transform: scale(1.1);
 }
+
 </style>
 </head>
 <body>
 <div class = "header">
-	<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="App.html">Home</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Research</a> | <a href="Private_Pictures_Adithya.html">e-Verify</a></b>
+	<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="App.html">Home</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Analytics</a> | <a href="Excercise app Gallary.html">Gallery</a> | <a href="Admin.html">Admin-Only</a></b>
 </div>
 <br/>
 
 <center>
 <div class = "shadow">
-    <h1>Gallery!</h1>
+    <h1>Your Private Pictures!</h1>
 	<br/><br/>
 </div>
-<a href = "..\Images\cycling.jpg"><img src="..\Images\cycling.jpg" alt="image1" width="400" height="300"></a>
-<a href = "..\Images\exercise.jpg"><img src="..\Images\exercise.jpg" alt="image2" width="400" height="300"></a>
-<a href = "..\Images\IMG-20210103-WA0001.jpg"><img src="..\Images\IMG-20210103-WA0001.jpg" alt="image3" width="400" height="300"></a>
-<a href = "..\Images\Running.jpg"><img src="..\Images\Running.jpg" alt="image4" width="400" height="300"></a>
-<a href = "..\Images\Soccer ball.jpg"><img src="..\Images\Soccer ball.jpg" alt="image5" width="400" height="300"></a>
-<a href = "..\Images\sports.jpg"><img src="..\Images\sports.jpg" alt="image6" width="400" height="300"></a>
-<a href = "..\Images\Thanks for Watching3.gif"><img src="..\Images\Thanks for Watching3.gif" alt="image7" width="400" height="300"></a>
-<h3>Upload your own image!</h3>
-<form enctype = "multipart/form-data" action = "../cgi-bin/save_file.py" method = "post">
+
+
+<a href = "..\adithya_images\IMG-20210103-WA0001.jpg"><img src="..\adithya_images\IMG-20210103-WA0001.jpg" alt="image1" width="300" height="200"><br/>
+<b><a href = "../cgi-bin/delete_private_file_notadmin.py?post=..\adithya_images\IMG-20210103-WA0001.jpg">Delete picture</a></b><br/><br/>
+<a href = "..\adithya_images\smile.png"><img src="..\adithya_images\smile.png" alt="image2" width="300" height="200"><br/>
+<b><a href = "../cgi-bin/delete_private_file_notadmin.py?post=..\adithya_images\smile.png">Delete picture</a></b><br/><br/>
+<h3>Upload your own private image!</h3>
+<form enctype = "multipart/form-data" action = "../cgi-bin/save_private_file.py_notadmin" method = "post">
    <p>File: <input type = "file" name = "filename" /></p>
    <p><input type = "submit" value = "Upload" class = "registerbtn"/></p>
 </form>
+<br/>
+<!--
+<b><a href="../cgi-bin/delete_private_file.py">Delete</a></b>
+
+<form enctype = "multipart/form-data" action = "../cgi-bin/delete_private_file_notadmin.py" method = "post">
+   <p>File: <input type = "file" name = "filename" /></p>
+   <p><input type = "submit" value = "Delete" /></p>
+</form>
+-->
 <br/>
 </center>
 <div class = "container footer" style = "color:gray">

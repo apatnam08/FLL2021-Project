@@ -3,7 +3,7 @@ import cgi, os
 import cgitb; cgitb.enable()
 form = cgi.FieldStorage()
 # Get filename here.
-fn = int(form['user'].value)
+fn = int(form['user'].value) + 1000
 
 # below code is to regenerate html page for the updated private gallery
 
@@ -138,7 +138,7 @@ a {
 	
 
 ''')
-imgLine='<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="Excercise app Gallary.html">Gallery</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Analytics</a> | <a href="App Image Verification.html">e-Verify</a> | <a href="Admin.html">Admin-Only</a> &nbsp; &nbsp; &nbsp; &nbsp; <button id="myBtn" class="registerbtn" >Thank you!</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 	<span style="background-color: #CBCBCB">' + str(fn) + ' points</span></b>' + '\n'
+imgLine='<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="Excercise app Gallary.html">Gallery</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Analytics</a> | <a href="Private_Pictures_Adithya.html">e-Verify</a> | <a href="Admin.html">Admin-Only</a> &nbsp; &nbsp; &nbsp; &nbsp; <button id="myBtn" class="registerbtn" >Thank you!</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 	<span style="background-color: #CBCBCB">' + str(fn) + ' points</span></b>' + '\n'
 htmlFile.write(imgLine)
 htmlFile.write('''
 </div>
@@ -239,6 +239,6 @@ print("Content-Type: text/html\n")
 print("<html>")
 print("<body>")
 print("<p>%s</p>"  % (message))
-print("<h3>To go back to the Admin page, <a href=\"..\\client\\Admin.html\">click here</a></h2>")
+print("<h3>To go back to the Admin page, <a href=\"..\\client\\App.html\">click here</a></h2>")
 print("</body>")
 print("</html>")

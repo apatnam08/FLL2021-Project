@@ -103,7 +103,7 @@ hr {
 
 /* Add a blue text color to links */
 a {
-  color: dodgerblue;
+  color: #E6B000;
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
