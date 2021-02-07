@@ -36,7 +36,8 @@ else:
    disability = "Not set"
 # store user details in a file
 file = open('users.csv', 'a')
-record=first_name+','+last_name+','+email+','+password+','+gender+','+age+' years old'+','+heart_rate+' bpm'+','+height+' inches'+','+weight+' pounds'+','+'20/'+sight+','+'state: '+state+','+'Disability? '+disability+'\n'
+
+record=first_name+','+last_name+','+email+','+password+','+gender+','+age+','+heart_rate+','+height+','+weight+','+'20/'+sight+','+state+','+disability+'\n'
 file.write(record)
 file.close()
 
@@ -62,7 +63,6 @@ for w in user_dict:
     if user_dict[w[0]] == email:
          print ("<h2>Username used<h2>")
 '''
-print("<h4>%s</h>" % (user_dict))
 print("<h2>To got to the app, <a href=\"..\\client\\App.html\">click here</a></h2>")
 #print("<h3>To go to the app <p href = "App.html"> click here</p><h3>")
 #print("<input id="signup_btn" type="submit" value="Start Excercising Now!" ></input>")

@@ -152,7 +152,7 @@ a {
      htmlFile.write(removeLine)
      fileNum+=1
    htmlFile.write('''<h3>Upload your own private image!</h3>
-<form enctype = "multipart/form-data" action = "../cgi-bin/save_private_file.py_notadmin" method = "post">
+<form enctype = "multipart/form-data" action = "../cgi-bin/save_private_file_notadmin.py" method = "post">
    <p>File: <input type = "file" name = "filename" /></p>
    <p><input type = "submit" value = "Upload" class = "registerbtn"/></p>
 </form>
@@ -314,7 +314,7 @@ a {
     '''
        buttonLine='''
     <form name="input" action="../cgi-bin/App test.py" method="post">
-     <input type="text" name="user" id="mytext'''+str(fileNum)+'''"><br/>
+     <input type="text" name="points" id="mytext'''+str(fileNum)+'''"><br/>
      <input type="submit" value="Submit" class = "registerbtn">
     </form>'''
        htmlFile.write(imgLine)

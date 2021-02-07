@@ -129,7 +129,7 @@ a {
 </head>
 <body>
 <div class = "header">
-	<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="App.html">Home</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Research</a> | <a href="App Image Verification.html">e-Verify</a></b>
+	<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="App.html">Home</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Research</a> | <a href="Private_Pictures_Adithya.html">e-Verify</a></b>
 </div>
 <br/>
 

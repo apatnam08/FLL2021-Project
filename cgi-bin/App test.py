@@ -2,8 +2,25 @@
 import cgi, os
 import cgitb; cgitb.enable()
 form = cgi.FieldStorage()
+import csv
+import pandas as pd
 # Get filename here.
-fn = int(form['user'].value) + 1000
+score = int(form['points'].value)
+score_string = str(score)
+#print("incoming score: ", score_string):
+
+f = open("c:\\users\\apatn\\demofile2.txt", "a")
+f.write("\nNow the file has more content!\n")
+f.write(str(score))
+f.write("\n")
+f.close()
+file_name = 'C:\\Users\\apatn\\OneDrive\\Documents\\GitHub\\FLL2021-Project\\users.csv'
+df = pd.read_csv(file_name)
+for i in range (0, len(df.index)):
+    if df.at[i, 'Email'] == 'apatnam08@gmail.com':
+        df.at[i, 'Points'] = int(df.at[i, 'Points']) + score
+        total_score = int(df.at[i, 'Points'])
+df.to_csv(file_name)
 
 # below code is to regenerate html page for the updated private gallery
 
@@ -138,7 +155,7 @@ a {
 	
 
 ''')
-imgLine='<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="Excercise app Gallary.html">Gallery</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Analytics</a> | <a href="Private_Pictures_Adithya.html">e-Verify</a> | <a href="Admin.html">Admin-Only</a> &nbsp; &nbsp; &nbsp; &nbsp; <button id="myBtn" class="registerbtn" >Thank you!</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 	<span style="background-color: #CBCBCB">' + str(fn) + ' points</span></b>' + '\n'
+imgLine='<b>The WALL-Exercising | <a href="Sign In.html">Sign in</a> | <a href="Excercise app Gallary.html">Gallery</a> | <a href="Exercise app Inspiration.html">Inspiration</a> | <a href="Excercise app Research.html">Analytics</a> | <a href="Private_Pictures_Adithya.html">e-Verify</a> | <a href="Admin.html">Admin-Only</a> &nbsp; &nbsp; &nbsp; &nbsp; <button id="myBtn" class="registerbtn" >Thank you!</button><div class = "shadow">Your current points: &nbsp; ' + str(total_score) + ' points</span></div></b>' + '\n'
 htmlFile.write(imgLine)
 htmlFile.write('''
 </div>
@@ -233,6 +250,7 @@ window.onclick = function(event) {
 htmlFile.write("</body>\n")
 htmlFile.write("</html>\n")
 htmlFile.close()  
+
 
 message = 'The points were given succesfully'
 print("Content-Type: text/html\n")

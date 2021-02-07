@@ -304,7 +304,7 @@ for file in os.listdir("adithya_images\\"):
 '''
     buttonLine='''
 <form name="input" action="../cgi-bin/App test.py" method="post">
- <input type="text" name="user" id="mytext'''+str(fileNum)+'''"><br/>
+ <input type="text" name="points" id="mytext'''+str(fileNum)+'''"><br/>
  <input type="submit" value="Submit" class = "registerbtn">
 </form>'''
     htmlFile.write(imgLine)
