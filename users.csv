@@ -1,6 +1,6 @@
-,Unnamed: 0,Unnamed: 0.1,Unnamed: 0.1.1,Unnamed: 0.1.1.1,Unnamed: 0.1.1.1.1,Unnamed: 0.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1.1.1.1.1,StudentId,First,Last,Email,Password,Gender,Age,BPM,Height(in),Weight(lb),Eyesight,State,Disability,Points
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Er,Wr,erwr@gmail.com,erwr,female,789,89,789,78,20/78,AL,yes,1900
-1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Adithya,Patnam,apatnam08@gmail.com,adi108108,male,12,70,60,85,20/20,NY,no,5555
-2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,Pranati,Patnam,ppatnam04@gmail.com,2004,female,16,70,66,125,20/20,NY,no,1600
-3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,Mohan,Patnam,mpatnam@gmail.com,mkpatnam,male,45,65,68,150,20/40,NY,no,1200
-4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,Akila,Govidarajaloo,akila1008@yahoo.com,akila,female,45,65,62,134,20/40,NY,no,1200
+,Unnamed: 0,Unnamed: 0.1,Unnamed: 0.1.1,Unnamed: 0.1.1.1,Unnamed: 0.1.1.1.1,Unnamed: 0.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1.1.1.1.1.1.1,Unnamed: 0.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1,StudentId,First,Last,Email,Password,Gender,Age,BPM,Height(in),Weight(lb),Eyesight,State,Disability,Points
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,Er,Wr,erwr@gmail.com,erwr,female,789,89,789,78,20/78,AL,yes,1900
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,Adithya,Patnam,apatnam08@gmail.com,adi108108,male,12,70,60,85,20/20,NY,no,5556
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,Pranati,Patnam,ppatnam04@gmail.com,2004,female,16,70,66,125,20/20,NY,no,1600
+3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,Mohan,Patnam,mpatnam@gmail.com,mkpatnam,male,45,65,68,150,20/40,NY,no,1200
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,Akila,Govidarajaloo,akila1008@yahoo.com,akila,female,45,65,62,134,20/40,NY,no,1200
